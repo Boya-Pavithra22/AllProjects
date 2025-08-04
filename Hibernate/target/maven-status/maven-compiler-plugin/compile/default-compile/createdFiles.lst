@@ -1,0 +1,5 @@
+com/wipro/hibernateassignment/App.class
+com/wipro/main/MainApp.class
+com/wipro/dao/ItemDAO.class
+com/wipro/model/Item.class
+com/wipro/util/HibernateUtil.class

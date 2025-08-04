@@ -1,10 +1,13 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context"
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="https://www.springframework.org/schema/beans"
+       xmlns:context="https://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        >
 
+    <!-- Scan components (controllers, services, repos, etc.) -->
     <context:component-scan base-package="com.wipro.controller" />
 
+    <!-- JDBC Configuration -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/myjavacode" />
@@ -12,6 +15,7 @@
         <property name="password" value="pavithra" />
     </bean>
 
+    <!-- Hibernate Configuration -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="com.example.model" />
