@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.wipro.springwithhibernate</groupId>
-  <artifactId>spring-hibernate</artifactId>
+  <groupId>com.wipro.springframework</groupId>
+  <artifactId>spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-hibernate</name>
+  <name>springframework</name>
   <url>http://maven.apache.org</url>
 
   <properties>
