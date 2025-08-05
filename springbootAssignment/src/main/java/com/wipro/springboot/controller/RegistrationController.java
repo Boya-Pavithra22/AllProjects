@@ -1,7 +1,7 @@
 package com.wipro.springboot.controller;
 
-import com.wipro.springboot.model.User;
-import com.wipro.springboot.repository.UserRepository;
+import com.wipro.springboot.model.RegistrationUser;
+import com.wipro.springboot.repository.RegistrationUserRepository;
 
 import jakarta.validation.Valid;
 
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
 public class RegistrationController {
 
     @Autowired
-    private UserRepository userRepository;
+    private RegistrationUserRepository registrationUserRepository;
 
-    @PostMapping("/adduser")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody User user) {
-        User savedUser = userRepository.save(user);
-        return ResponseEntity.ok("User registered successfully with ID: " + savedUser);
+    @PostMapping("/addregistrationuser")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody RegistrationUser user) {
+        RegistrationUser savedUser = registrationUserRepository.save(user);
+        return ResponseEntity.ok("RegistrationUser registered successfully with ID: " + savedUser);
     }
 }
