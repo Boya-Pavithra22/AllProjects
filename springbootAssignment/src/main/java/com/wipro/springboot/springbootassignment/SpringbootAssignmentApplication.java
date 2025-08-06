@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication(scanBasePackages = "com.wipro.springboot")
 @EnableJpaRepositories(basePackages = "com.wipro.springboot.repository")
 @EntityScan(basePackages = "com.wipro.springboot.model")
+
 public class SpringbootAssignmentApplication {
 
 	public static void main(String[] args) {
