@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Lab - Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center p-8 min-h-screen">
+
+    <div class="container bg-white p-8 rounded-lg shadow-xl max-w-4xl w-full">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Image Lab - Gallery</h1>
+            <p class="text-lg text-gray-600 mt-2">Practice with `&lt;img&gt;`, `srcset`, `&lt;picture&gt;`, SVG, and accessibility</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Responsive Image Gallery Section -->
+            <div class="gallery-section">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Responsive Image Gallery</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Image 1: Basmati Rice -->
+                    <div class="rounded-lg overflow-hidden border border-gray-200">
+                        <!-- Demonstrates lazy loading with loading="lazy" -->
+                        <img src="images/ricebag.jpeg" 
+                             alt="A bag of basmati rice" 
+                             class="w-full h-48 object-cover" 
+                             loading="lazy">
+                        <div class="p-3 text-sm text-gray-600">
+                            Basmati rice - 6 kg bag
+                        </div>
+                    </div>
+
+                    <!-- Image 2: Snacks Box -->
+                    <div class="rounded-lg overflow-hidden border border-gray-200">
+                        <picture>
+                            <!-- This demonstrates the picture element for different image formats and sizes.
+                                 Note: the image is a placeholder, but this structure shows how you would use it. -->
+                            <source srcset="https://placehold.co/300x200/d6a36c/ffffff?text=Assorted+Snacks" media="(min-width: 600px)">
+                            <img src="images/nuts.jpeg" 
+                                 alt="Assorted snacks in a box" 
+                                 class="w-full h-48 object-cover" 
+                                 loading="lazy">
+                        </picture>
+                        <div class="p-3 text-sm text-gray-600">
+                            Assorted Snacks Box
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SVG Image for the truck -->
+                <h3 class="text-xl font-semibold mt-8 mb-4">Delivery Truck SVG</h3>
+                <p class="text-gray-600 mb-4">Delivery truck SVG inline with accessible title/desc.</p>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-48 h-auto">
+                    <title>Delivery Truck Icon</title>
+                    <desc>An icon of a delivery truck.</desc>
+                    <path d="M1 3C1 2.44772 1.44772 2 2 2H18C18.5523 2 19 2.44772 19 3V11C19 11.5523 18.5523 12 18 12H2C1.44772 12 1 11.5523 1 11V3Z" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 8H23C23.5523 8 24 8.44772 24 9V17H22.5M19 8V12M19 8H18" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 17C15 18.6569 13.6569 20 12 20C10.3431 20 9 18.6569 9 17C9 15.3431 10.3431 14 12 14C13.6569 14 15 15.3431 15 17Z" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 17C7 18.6569 5.65685 20 4 20C2.34315 20 1 18.6569 1 17C1 15.3431 2.34315 14 4 14C5.65685 14 7 15.3431 7 17Z" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <!-- Decorative divider with ARIA hidden attribute for accessibility -->
+                <h3 class="text-xl font-semibold mt-8 mb-4">Decorative divider</h3>
+                <div class="h-1 w-full bg-gray-300 rounded-full my-4" aria-hidden="true"></div>
+                <p class="text-gray-600 mb-4">(not read by screen readers)</p>
+
+                <!-- Image map example -->
+                <h3 class="text-xl font-semibold mt-8 mb-4">Image Map</h3>
+                <p class="text-gray-600 mb-4">Click a section to navigate to that aisle.</p>
+                <img src="https://placehold.co/400x200/f0f0f0/333333?text=Clickable+Store+Map" usemap="#store-map" alt="A map of a store with different sections clickable">
+                
+                <map name="store-map">
+                    <area shape="rect" coords="0,0,200,200" href="#" alt="Snacks aisle">
+                    <area shape="rect" coords="200,0,400,200" href="#" alt="Produce aisle">
+                </map>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="notes-section">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Notes</h2>
+                <div class="bg-gray-50 p-4 rounded-lg text-sm text-gray-700">
+                    <p class="mb-4">Use &lt;srcset&gt; and &lt;picture&gt; to reduce bandwidth and serve modern formats.</p>
+                    <p class="mb-4">Add <code>loading="lazy"</code> to defer off-screen images.</p>
+                    <p>Click a section to navigate to that aisle (image map).</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Submit Button Section -->
+        <div class="mt-8 text-center">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                Submit Lab
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>
