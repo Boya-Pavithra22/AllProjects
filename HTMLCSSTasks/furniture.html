@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store Catalog</title>
+    
+    <!-- Internal CSS is defined here to style the overall page and general components -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .catalog-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .product-card p {
+            font-size: 1em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .buy-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Furniture Co.</h1>
+        <p>Quality furniture for your home.</p>
+    </header>
+
+    <main class="catalog-container">
+        
+        <!-- Product 1: Sofa -->
+        <div class="product-card">
+            <img src="https://placehold.co/300x200/cccccc/333333?text=Comfy+Sofa" alt="A modern grey sofa">
+            <h2>Modern Sofa</h2>
+            <p>A stylish and comfortable sofa, perfect for any living room.</p>
+            <p class="price">$799.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Product 2: Table (using inline CSS) -->
+        <div class="product-card" style="background-color: #e0f7fa;">
+            <img src="https://placehold.co/300x200/a3ccbb/ffffff?text=Dining+Table" alt="A wooden dining table">
+            <h2 style="color: #00796b;">Solid Wood Dining Table</h2>
+            <p>A beautifully crafted dining table made from solid oak wood.</p>
+            <p class="price">$450.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Product 3: Chair (using inline CSS) -->
+        <div class="product-card">
+            <img src="https://placehold.co/300x200/d6a36c/ffffff?text=Accent+Chair" alt="A stylish accent chair">
+            <h2>Accent Chair</h2>
+            <p>An elegant chair to add a touch of sophistication to your space.</p>
+            <p class="price">$250.00</p>
+            <button class="buy-button" style="background-color: #e74c3c; color: white; border: none;">Buy Now</button>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery Order</title>
+    <link rel="stylesheet" href="css/grocery_form.css">
+</head>
+<body>
+    <h2>Online Grocery Order</h2>
+
+    <form action="/php/order.php" method="POST">
+        
+        <!-- Customer Details -->
+        <fieldset>
+            <legend>Customer Details</legend>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required autofocus><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required><br><br>
+
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="address" required></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Order Details -->
+        <fieldset>
+            <legend>Order Details</legend>
+
+            <label>Grocery Items:</label><br>
+            <input type="checkbox" name="items[]" value="Rice"> Rice
+            <input type="checkbox" name="items[]" value="Milk"> Milk
+            <input type="checkbox" name="items[]" value="Bread"> Bread
+            <input type="checkbox" name="items[]" value="Eggs"> Eggs
+            <input type="checkbox" name="items[]" value="Sugar"> Sugar
+            <br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+            <label for="date">Delivery Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Preferred Delivery Time:</label>
+            <input type="time" id="time" name="time"><br><br>
+
+            <label>Payment Method:</label><br>
+            <input type="radio" name="payment" value="COD" required> Cash on Delivery
+            <input type="radio" name="payment" value="UPI"> UPI
+            <input type="radio" name="payment" value="Card"> Card
+        </fieldset>
+
+        <br>
+
+        <!-- Special Instructions -->
+        <label for="instructions">Special Instructions:</label><br>
+        <textarea id="instructions" name="instructions"></textarea>
+        <br><br>
+
+        <!-- Confirm Order -->
+        <input type="checkbox" id="confirm" name="confirm" required>
+        <label for="confirm">I confirm my order</label>
+        <br><br>
+
+        <!-- Submit and Reset -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Multimedia Lab</title>
+    
+    <!-- This links the HTML file to the external stylesheet -->
+    <link rel="stylesheet" href="css/multimedia.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>HTML5 Multimedia Lab</h1>
+
+        <!-- Video Tag -->
+        <h2>Video Example</h2>
+        <p>This section uses the &lt;video&gt; tag to embed a video player. The <code>controls</code> attribute adds the play, pause, and volume controls.</p>
+        <video controls>
+            <!-- A placeholder video source URL -->
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Audio Tag -->  
+        <h2>Audio Example</h2>
+        <audio controls>
+            <!-- A placeholder audio source URL -->
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Embedded Document (PDF) -->
+        <h2>Embedded Document (PDF)</h2>
+        <p>The &lt;embed&gt; tag can be used to embed a document, such as a PDF, directly into the page. The <code>src</code> attribute points to the PDF file.</p>
+        <embed src="https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf" type="application/pdf">
+
+        <!-- Iframe -->
+        <h2>Iframe (Inline Frame)</h2>
+        <iframe src="https://www.w3schools.com" title="W3Schools Website"></iframe>
+
+        <!-- Inline SVG -->
+        <h2>Inline SVG (Scalable Vector Graphics)</h2>
+        <p>SVG code can be written directly inside the HTML file to create vector graphics. This is great for icons and simple diagrams.</p>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <rect x="50" y="50" width="100" height="100" fill="#3498db" />
+            <circle cx="100" cy="100" r="40" stroke="#e74c3c" stroke-width="5" fill="none" />
+        </svg>
+
+    </div>
+
+</body>
+</html>
