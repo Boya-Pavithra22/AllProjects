@@ -9,6 +9,48 @@
 </head>
 <body>
 
+   
+        <!-- Play Button -->
+               <button id="playAudioBtn" class="btn btn-primary btn-xs p-1" title="Play Chanting" style="font-size: 0.8rem; line-height: 1; margin-left: 95%;">
+            🎵
+        </button>
+        <!-- Stop Button -->
+        <button id="stopAudioBtn" class="btn btn-danger btn-xs p-1" title="Stop Chanting" style="font-size: 0.8rem; line-height: 1; display:none;margin-left: 95%;">
+            ⏹
+        </button>
+
+   
+
+
+<!-- Audio Container -->
+<div id="chantingContainer"></div>
+
+<!-- Script to Handle Play & Stop -->
+<script>
+    const playBtn = document.getElementById('playAudioBtn');
+    const stopBtn = document.getElementById('stopAudioBtn');
+    const container = document.getElementById('chantingContainer');
+
+    playBtn.addEventListener('click', function() {
+        container.innerHTML = `
+            <iframe width="0" height="0"
+                src="https://www.youtube.com/embed/nbCCcyKdiX4?autoplay=1&loop=1&playlist=nbCCcyKdiX4"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        `;
+        playBtn.style.display = 'none';
+        stopBtn.style.display = 'inline-block';
+    });
+
+    stopBtn.addEventListener('click', function() {
+        container.innerHTML = ''; // Stop audio
+        stopBtn.style.display = 'none';
+        playBtn.style.display = 'inline-block';
+    });
+</script>
+
     <!-- Banner -->
     <header class="text-center position-relative">
     <img src="/Users/anilmanne/Desktop/Myrepo/HTMLCSSTasks/images/Tirumala_Venkateswara_temple_entrance.jpeg"
