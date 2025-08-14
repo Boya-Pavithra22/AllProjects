@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTO Vehicle Registration</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .progress { height: 20px; }
+</style>
+</head>
+<body class="bg-light">
+
+<div class="container mt-4">
+    <h2 class="mb-4">RTO Vehicle Registration Form</h2>
+
+    <!-- Progress Bar -->
+    <div class="progress mb-3">
+        <div id="progressBar" class="progress-bar" style="width: 0%">0%</div>
+    </div>
+
+    <form id="rtoForm" novalidate>
+
+        <div class="accordion" id="rtoAccordion">
+
+            <!-- Section 1: Owner -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ownerSection">
+                        1. Owner Details
+                    </button>
+                </h2>
+                <div id="ownerSection" class="accordion-collapse collapse show" data-bs-parent="#rtoAccordion">
+                    <div class="accordion-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Enter a valid email.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Mobile</label>
+                                <input type="tel" class="form-control" id="mobile" pattern="^[6-9]\d{9}$" required>
+                                <div class="invalid-feedback">Enter a valid Indian mobile number.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">DOB</label>
+                                <input type="date" class="form-control" id="dob" required>
+                                <div class="invalid-feedback">You must be at least 18 years old.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Aadhaar</label>
+                                <input type="text" class="form-control" id="aadhaar" pattern="^\d{12}$" required>
+                                <div class="invalid-feedback">Enter a valid 12-digit Aadhaar number.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">PAN</label>
+                                <input type="text" class="form-control" id="pan" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$" required>
+                                <div class="invalid-feedback">Enter a valid PAN number.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Address -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addressSection">
+                        2. Address Details
+                    </button>
+                </h2>
+                <div id="addressSection" class="accordion-collapse collapse" data-bs-parent="#rtoAccordion">
+                    <div class="accordion-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">Address Line 1</label>
+                                <input type="text" class="form-control" id="addr1" required>
+                                <div class="invalid-feedback">Please enter your address.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Address Line 2</label>
+                                <input type="text" class="form-control" id="addr2">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                                <div class="invalid-feedback">Please enter city.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">State</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">Choose...</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Maharashtra</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a state.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">PIN</label>
+                                <input type="text" class="form-control" id="pin" pattern="^\d{6}$" required>
+                                <div class="invalid-feedback">Enter a valid 6-digit PIN.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Sections -->
+            <!-- (Vehicle, Compliance, Finance, Uploads, Declaration) would go here in same format -->
+        </div>
+
+        <hr>
+        <button class="btn btn-primary" type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+</div>
+
+<!-- Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="successToast" class="toast text-bg-success" role="alert">
+        <div class="toast-body">
+            Application submitted successfully!
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="rto-validation.js"></script>
+</body>
+</html>
