@@ -1,14 +1,14 @@
 import React from 'react';
-import GroceryList from './components/GroseryList';
-import Car from './components/Car';
-import Phone from './components/Phone';
-import SweetsList from './components/SweetsList';
-import Electronics from './components/Electronics';
-import CanteenMenu from './components/CanteenMenu';
-import JuiceList from './components/JuiceList';
-import Restaurant from './components/Restaurant';
-import TempleList from './components/TempleList';
-import TailorShop from './components/TailorShop';
+import GroceryList from '../src/components/GroseryList';
+import Car from '../src/components/Car';
+import Phone from '../src/components/Phone';
+import SweetsList from '../src/components/SweetsList';
+import Electronics from '../src/components/Electronics';
+import CanteenMenu from '../src/components/CanteenMenu';
+import JuiceList from '../src/components/JuiceList';
+import Restaurant from '../src/components/Restaurant';
+import TempleList from '../src/components/TempleList';
+import TailorShop from '../src/components/TailorShop';
 import './App.css';  // instead of './styles/App.css'
 
 
