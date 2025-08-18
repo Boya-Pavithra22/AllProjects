@@ -9,6 +9,11 @@ import JuiceList from '../src/components/JuiceList';
 import Restaurant from '../src/components/Restaurant';
 import TempleList from '../src/components/TempleList';
 import TailorShop from '../src/components/TailorShop';
+import Fruits from '../src/components/Fruits';
+import Television from '../src/components/Television';
+import MarriageForm from '../src/components/MarriageForm';
+import AccessoriesForm from '../src/components/AccessoriesForm';
+import BakingForm from '../src/components/BakingForm';
 import './App.css';  // instead of './styles/App.css'
 
 
@@ -20,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <GroceryList items={groceries} />
-      <Car brand="Toyota" model="Fortuner" color="Black" year="2022" />
+      <Car brand="Hundai" model="i20" color="Black" year="2024" />
       <Phone />
       <SweetsList />
       <Electronics />
@@ -29,6 +34,11 @@ function App() {
       <Restaurant />
       <TempleList />
       <TailorShop />
+      <Fruits />
+      <Television />
+      <MarriageForm />
+      <AccessoriesForm />
+      <BakingForm />
     </div>
   );
 }

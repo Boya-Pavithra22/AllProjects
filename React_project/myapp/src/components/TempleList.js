@@ -24,7 +24,7 @@ const TempleList = () => {
 
   return (
     <div style={{ margin: '30px' }}>
-      <h2>🛕 Famous Temples in India</h2>
+      <h2> Famous Temples in India</h2>
       <table border="1" cellPadding="10" cellSpacing="0" style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>

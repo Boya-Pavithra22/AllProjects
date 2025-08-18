@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const tailoringItems = [
-  { title: 'Shirt', price: 20, fabrics: ['Cotton', 'Linen', 'Polyester'] },
-  { title: 'Pants', price: 30, fabrics: ['Denim', 'Wool', 'Chino'] },
-  { title: 'Lehenga', price: 150, fabrics: ['Silk', 'Georgette', 'Chiffon'] },
-  { title: 'Blouse', price: 40, fabrics: ['Cotton', 'Silk', 'Satin'] },
+  { title: 'Suits', price: 20000, fabrics: ['Cotton', 'Linen', 'Polyester'] },
+  { title: 'Sarees', price: 3000, fabrics: ['Silk', 'Rayon', 'Tissue Silk '] },
+  { title: 'Lehenga', price: 15000, fabrics: ['Silk', 'Georgette', 'Chiffon'] },
+  { title: 'Blouse', price: 1400, fabrics: ['Cotton', 'Silk', 'Satin'] },
 ];
 
 export default function TailoringServices() {
@@ -12,7 +12,7 @@ export default function TailoringServices() {
 
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4">👗 Tailoring Services</h2>
+      <h2 className="text-center mb-4"> Tailoring Services</h2>
 
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         {tailoringItems.map((item, index) => (

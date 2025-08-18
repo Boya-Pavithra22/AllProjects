@@ -18,7 +18,7 @@ const Electronics = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '40px' }}>
-      <h2>🔌 Electronic Item Details</h2>
+      <h2> Electronic Item Details</h2>
       <p><strong>Name:</strong> {name}</p>
       <p><strong>Brand:</strong> {brand}</p>
       <p><strong>Price:</strong> ₹{price}</p>

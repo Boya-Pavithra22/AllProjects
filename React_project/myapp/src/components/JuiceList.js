@@ -11,7 +11,7 @@ const JuiceList = () => {
   return (
     <div style={{ margin: '20px', display: 'flex', justifyContent: 'center' }}>
       <div>
-        <h2 style={{ textAlign: 'center' }}>🥤 Juice Menu</h2>
+        <h2 style={{ textAlign: 'center' }}> Juice Menu</h2>
             <table border="1" cellPadding="10" cellSpacing="0" style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                     <tr>

@@ -18,7 +18,7 @@ const Phone = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '40px' }}>
-      <h2>📱 Phone Details</h2>
+      <h2> Phone Details</h2>
       <p><strong>Brand:</strong> {phone.brand}</p>
       <p><strong>Model:</strong> {phone.model}</p>
       <p><strong>Price:</strong> ₹{phone.price}</p>
