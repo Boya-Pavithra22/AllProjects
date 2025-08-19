@@ -3,24 +3,27 @@ import React, { Component } from "react";
 class AccessoriesForm extends Component {
   constructor(props) {
     super(props);
+    // Initialize state for all form fields + submission flag
     this.state = {
-      accessoryName: "",
-      description: "",
-      category: "",
-      brand: "",
-      available: false,
-      warranty: "",
-      submitted: false
+      accessoryName: "", // text input
+      description: "",   // textarea
+      category: "",      // dropdown
+      brand: "",         // radio
+      available: false,  // checkbox
+      warranty: "",      // number input
+      submitted: false   // to show table after submit
     };
   }
 
+  // Handle changes for all inputs (text, select, radio, checkbox, number)
   handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     this.setState({
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value // handle checkbox separately
     });
   };
 
+  // On form submit: prevent refresh + mark as submitted
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({ submitted: true });
@@ -29,20 +32,23 @@ class AccessoriesForm extends Component {
   render() {
     return (
       <div className="container mt-4">
+        {/* Form Card */}
         <div className="card shadow">
           <div className="card-header bg-primary text-white">
             <h3>Accessories Form</h3>
           </div>
           <div className="card-body">
+            {/* Form starts here */}
             <form onSubmit={this.handleSubmit}>
-              {/* Accessory Name (Text) */}
+
+              {/* Accessory Name (Text Input) */}
               <div className="form-group">
                 <label>Accessory Name</label>
                 <input
                   type="text"
                   name="accessoryName"
                   className="form-control"
-                  value={this.state.accessoryName}
+                  value={this.state.accessoryName} // controlled by state
                   onChange={this.handleChange}
                   required
                 />
@@ -60,7 +66,7 @@ class AccessoriesForm extends Component {
                 ></textarea>
               </div>
 
-              {/* Category (Select) */}
+              {/* Category (Dropdown) */}
               <div className="form-group">
                 <label>Category</label>
                 <select
@@ -77,20 +83,22 @@ class AccessoriesForm extends Component {
                 </select>
               </div>
 
-              {/* Brand (Radio) */}
+              {/* Brand (Radio Buttons) */}
               <div className="form-group">
                 <label className="d-block">Brand</label>
+                {/* Apple */}
                 <div className="form-check form-check-inline">
                   <input
                     type="radio"
                     name="brand"
                     value="Apple"
                     className="form-check-input"
-                    checked={this.state.brand === "Apple"}
+                    checked={this.state.brand === "Apple"} // check if selected
                     onChange={this.handleChange}
                   />
                   <label className="form-check-label">Apple</label>
                 </div>
+                {/* Samsung */}
                 <div className="form-check form-check-inline">
                   <input
                     type="radio"
@@ -102,6 +110,7 @@ class AccessoriesForm extends Component {
                   />
                   <label className="form-check-label">Samsung</label>
                 </div>
+                {/* Sony */}
                 <div className="form-check form-check-inline">
                   <input
                     type="radio"
@@ -121,13 +130,13 @@ class AccessoriesForm extends Component {
                   type="checkbox"
                   name="available"
                   className="form-check-input"
-                  checked={this.state.available}
+                  checked={this.state.available} // true/false from state
                   onChange={this.handleChange}
                 />
                 <label className="form-check-label">Available in Stock</label>
               </div>
 
-              {/* Warranty (Number) */}
+              {/* Warranty (Number Input) */}
               <div className="form-group">
                 <label>Warranty (Years)</label>
                 <input
@@ -139,6 +148,7 @@ class AccessoriesForm extends Component {
                 />
               </div>
 
+              {/* Submit Button */}
               <button type="submit" className="btn btn-success mt-2">
                 Submit
               </button>
@@ -146,7 +156,7 @@ class AccessoriesForm extends Component {
           </div>
         </div>
 
-        {/* Display Submitted Data */}
+        {/* Display Submitted Data in Table */}
         {this.state.submitted && (
           <div className="card mt-4">
             <div className="card-header bg-info text-white">
@@ -161,26 +171,32 @@ class AccessoriesForm extends Component {
                   </tr>
                 </thead>
                 <tbody>
+                  {/* Accessory Name */}
                   <tr>
                     <td><strong>Accessory Name</strong></td>
                     <td>{this.state.accessoryName}</td>
                   </tr>
+                  {/* Description */}
                   <tr>
                     <td><strong>Description</strong></td>
                     <td>{this.state.description}</td>
                   </tr>
+                  {/* Category */}
                   <tr>
                     <td><strong>Category</strong></td>
                     <td>{this.state.category}</td>
                   </tr>
+                  {/* Brand */}
                   <tr>
                     <td><strong>Brand</strong></td>
                     <td>{this.state.brand}</td>
                   </tr>
+                  {/* Available */}
                   <tr>
                     <td><strong>Available</strong></td>
                     <td>{this.state.available ? "Yes" : "No"}</td>
                   </tr>
+                  {/* Warranty */}
                   <tr>
                     <td><strong>Warranty</strong></td>
                     <td>{this.state.warranty} years</td>

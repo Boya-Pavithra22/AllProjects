@@ -14,6 +14,8 @@ import Television from '../src/components/Television';
 import MarriageForm from '../src/components/MarriageForm';
 import AccessoriesForm from '../src/components/AccessoriesForm';
 import BakingForm from '../src/components/BakingForm';
+import MovieForm from '../src/components/MovieForm';
+import FlightBooking from '../src/components/FlightBooking';
 import './App.css';  // instead of './styles/App.css'
 
 
@@ -39,6 +41,8 @@ function App() {
       <MarriageForm />
       <AccessoriesForm />
       <BakingForm />
+     <MovieForm />
+     <FlightBooking />
     </div>
   );
 }
