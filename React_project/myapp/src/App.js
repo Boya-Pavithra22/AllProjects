@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GroceryList from './components/GroseryList';
+import GroceryList from './components/GroceryList';  // ✅ fixed spelling
 import Car from './components/Car';
 import Phone from './components/Phone';
 import SweetsList from './components/SweetsList';
@@ -22,18 +22,15 @@ import Chair from "./components/Chair";
 import Table from "./components/Table";
 import Sofa from "./components/Sofa";
 import Bed from "./components/Bed";
-import './App.css';  // instead of './styles/App.css'
 import FestivalApp from "./components/FestivalApp";
-
-
-
+import MainComponent from "./components/MainComponent";
+import './App.css';
 
 const groceries = ["Rice", "Wheat", "Sugar", "Milk", "Oil"];
 
 function App() {
   const [selectedFurniture, setSelectedFurniture] = useState("Chair");
 
-  // Switch–case for furniture only
   const renderFurniture = () => {
     switch (selectedFurniture) {
       case "Chair":
@@ -51,9 +48,61 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Furniture Store</h1>
+      <GroceryList items={groceries} />
+      <hr />
 
-      {/* Dropdown to select furniture */}
+      <Car brand="Hundai" model="i20" color="Black" year="2024" />
+      <hr />
+
+      <Phone />
+      <hr />
+
+      <SweetsList />
+      <hr />
+
+      <Electronics />
+      <hr />
+
+      <CanteenMenu />
+      <hr />
+
+      <JuiceList />
+      <hr />
+
+      <Restaurant />
+      <hr />
+
+      <RestaurantForm />
+      <hr />
+
+      <TempleList />
+      <hr />
+
+      <TailorShop />
+      <hr />
+
+      <Fruits />
+      <hr />
+
+      <Television />
+      <hr />
+
+      <MarriageForm />
+      <hr />
+
+      <AccessoriesForm />
+      <hr />
+
+      <BakingForm />
+      <hr />
+
+      <MovieForm />
+      <hr />
+
+      <FlightBooking />
+      <hr />
+
+      <h1>Furniture Store</h1>
       <select
         value={selectedFurniture}
         onChange={(e) => setSelectedFurniture(e.target.value)}
@@ -63,32 +112,18 @@ function App() {
         <option value="Sofa">Sofa</option>
         <option value="Bed">Bed</option>
       </select>
-
-      {/* Show furniture dynamically */}
       <div>{renderFurniture()}</div>
+      <hr />
 
-      {/* Your other components */}
-      <GroceryList items={groceries} />
-      <Car brand="Hundai" model="i20" color="Black" year="2024" />
-      <Phone />
-      <SweetsList />
-      <Electronics />
-      <CanteenMenu />
-      <JuiceList />
-      <Restaurant />
-      <TempleList />
-      <TailorShop />
-      <Fruits />
-      <Television />
-      <MarriageForm />
-      <AccessoriesForm />
-      <BakingForm />
-      <MovieForm />
-      <FlightBooking />
-      <RestaurantForm />
       <Communication />
+      <hr />
+
       <FestivalApp />
-      </div>
+      <hr />
+
+      <MainComponent />
+  
+    </div>
   );
 }
 
