@@ -149,8 +149,7 @@ function App() {
       <JewelleryShop />
       <hr />
 
-      <EventRegistration />
-      <hr />
+      
 
       
 
