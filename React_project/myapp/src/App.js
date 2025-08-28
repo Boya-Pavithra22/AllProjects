@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GroceryList from './components/GroceryList';  // ✅ fixed spelling
+import GroceryList from './components/GroceryList';  
 import Car from './components/Car';
 import Phone from './components/Phone';
 import SweetsList from './components/SweetsList';
@@ -8,7 +8,7 @@ import CanteenMenu from './components/CanteenMenu';
 import JuiceList from './components/JuiceList';
 import Restaurant from './components/Restaurant';
 import TempleList from './components/TempleList';
-import TailorShop from './components/TailorShop';
+import TailorShop from './components/TailoringServices';
 import Fruits from './components/Fruits';
 import Television from './components/Television';
 import MarriageForm from './components/MarriageForm';
@@ -24,7 +24,14 @@ import Sofa from "./components/Sofa";
 import Bed from "./components/Bed";
 import FestivalApp from "./components/FestivalApp";
 import MainComponent from "./components/MainComponent";
+import HockeyRegistrationForm from "./components/HockeyRegistrationForm";
 import './App.css';
+import ChessTournamentForm from "./components/ChessTournamentForm";
+import Tailor from "./components/Tailor";
+import FootballPlayer from "./components/FootballPlayer";
+import IncomeTaxDashboard from "./components/IncomeTaxApp";
+import JewelleryShop from "./components/JewelleryShop";
+import EventRegistration from "./components/EventRegistration";
 
 const groceries = ["Rice", "Wheat", "Sugar", "Milk", "Oil"];
 
@@ -122,6 +129,33 @@ function App() {
       <hr />
 
       <MainComponent />
+      <hr />
+
+      <ChessTournamentForm />
+      <hr />
+
+      <HockeyRegistrationForm />
+      <hr />
+
+      <Tailor />
+      <hr />
+
+      <FootballPlayer />
+      <hr />
+
+      <IncomeTaxDashboard />
+      <hr />
+
+      <JewelleryShop />
+      <hr />
+
+      <EventRegistration />
+      <hr />
+
+      
+
+      
+
   
     </div>
   );
